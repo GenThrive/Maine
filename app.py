@@ -55,14 +55,14 @@ dds_orgs =  html.Div(
     ]
 )
 
-dds_programs =  html.Div(
-    # [html.P(k) for k in pg_filter_dict_checked]
-    [make_dropdown(
-        f'dd-pg-{k}',
-        pg_filter_dict_checked[k]['options'][0],
-        pg_filter_dict_checked[k]['display_name']) for k in pg_filter_dict_checked
-     ]
-)
+# dds_programs =  html.Div(
+#     # [html.P(k) for k in pg_filter_dict_checked]
+#     [make_dropdown(
+#         f'dd-pg-{k}',
+#         pg_filter_dict_checked[k]['options'][0],
+#         pg_filter_dict_checked[k]['display_name']) for k in pg_filter_dict_checked
+#      ]
+# )
 
 
 dashboard = html.Div([
