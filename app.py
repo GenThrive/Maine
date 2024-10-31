@@ -83,11 +83,14 @@ dashboard = html.Div([
 
 sidebar = html.Div([
     html.H2(page_title),
-    html.Img(src='/assets/NAAEE_Wisconsin_Logo.png', style={'height': '120px', 'width': '100%', 'padding-bottom': '10px'}),
+    # html.Img(src='/assets/NAAEE_Wisconsin_Logo.png', style={'height': '120px', 'width': '100%', 'padding-bottom': '10px'}),
     html.H4(sub_title),
     html.H5(filter_category_1),
     dds_orgs,
     html.Div(id='div-overview_msg'),
+    html.H6(['Powered by ',
+                 html.A('Gen:Thrive ',
+                        href='https://genthrive.org/', target='blank', style={'text-decoration':'none'}),html.Img(src='/assets/Generation-Thrive-ICON-Color-High-Res.png', style={'height':'15%', 'width':'15%'})], style={'padding-top':'1rem', 'padding-left':'10px', 'padding-right':'10px'}),
 ], style=SIDEBAR_STYLE)
 
 content = html.Div([
