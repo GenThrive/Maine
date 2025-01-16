@@ -208,7 +208,7 @@ def build_map(data):
         return no_data_fig()
     else:
         return make_map(
-            orgs_map, 'Latitude', 'Longitude', tx_esc, geojson_featureidkey, esc_count_df,
+            orgs_map, 'Latitude', 'Longitude', tx_esc, geojson_featureidkey, state_name, esc_count_df,
             'ESC', 'Organizations', map_center_lat, map_center_lon, map_zoom=map_zoom
         )
 

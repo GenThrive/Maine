@@ -193,9 +193,9 @@ def make_bar(df, category_col_index, count_col_index, show_category = True, layo
 
 
 
-def make_map(orgdata, lat_col, lon_col, choro_geojson,  featureidkey, choro_df, choro_df_location, choro_df_value, map_center_lat, map_center_lon, map_zoom = 5, hover_name = "Organization", hover_data = None):
+def make_map(orgdata, lat_col, lon_col, choro_geojson,  featureidkey, state_name, choro_df, choro_df_location, choro_df_value, map_center_lat, map_center_lon, map_zoom = 5, hover_name = "Organization", hover_data = None):
     # Design point layer
-    scatter_fig_hover_template = '<b>%{hovertext}</b><br>Education Service Center: %{customdata[0]}'
+    scatter_fig_hover_template = '<b>%{hovertext}</b>'
     scatter_fig = px.scatter_mapbox(orgdata, lat=lat_col, lon=lon_col,
                              hover_name=hover_name, hover_data=hover_data)
     scatter_fig.update_traces(hovertemplate=scatter_fig_hover_template)
@@ -210,7 +210,7 @@ def make_map(orgdata, lat_col, lon_col, choro_geojson,  featureidkey, choro_df, 
                zoom=map_zoom,
               center = {"lat": map_center_lat, "lon": map_center_lon},
               mapbox_style="open-street-map")
-    fig.update_traces(hovertemplate='ESC: %{location}<br>Organizations: %{z}')
+    fig.update_traces(hovertemplate=f'<b>%{{{state_name}}}</b>')
 
     # add pt layer to map
     for item in range(0,len(scatter_fig.data)):

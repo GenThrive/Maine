@@ -19,6 +19,7 @@ map_zoom = 5.072
 # For Texas this is the column that  definse the area category of the ESC
 geojson_featureidkey='properties.FID'
 data_area_col = 'ESC'
+state_name = 'properties.STATE'
 
 # ----------------------------------------------------------------------------
 # STYLING
